@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Marker - Phantom Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .card-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            width: 3.5in;
+            height: 2in;
+            background: linear-gradient(135deg, #0a0a20 0%, #000 100%);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(90deg, transparent 49%, rgba(0,245,255,0.1) 50%, transparent 51%),
+                linear-gradient(transparent 49%, rgba(0,245,255,0.1) 50%, transparent 51%);
+            background-size: 20px 20px;
+        }
+        
+        .marker-image {
+            width: 1.3in;
+            height: 1.3in;
+            background: white;
+            padding: 3px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .marker-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .card-text {
+            color: #00f5ff;
+            font-size: 9px;
+            letter-spacing: 3px;
+            margin-top: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card-tagline {
+            color: #ff00ff;
+            font-size: 7px;
+            margin-top: 4px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .print-btn {
+            background: #00f5ff;
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1rem;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            background: #00d4dd;
+            transform: scale(1.05);
+        }
+        
+        .instructions {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .instructions h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            color: #555;
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .back-link {
+            margin-top: 30px;
+            color: #00f5ff;
+            text-decoration: none;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            h1, .subtitle, .print-btn, .instructions, .back-link, .card-container {
+                display: none !important;
+            }
+            
+            .card {
+                margin: 0;
+                box-shadow: none;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🔮 Phantom Resume Card</h1>
+    <p class="subtitle">Print this and hand it to interviewers</p>
+    
+    <div class="card-container">
+        <div class="card">
+            <div class="marker-image">
+                <img src="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" alt="Hiro Marker">
+            </div>
+            <div class="card-text">SCAN TO REVEAL</div>
+            <div class="card-tagline">Paper fades. Digital is Beyond Time.</div>
+        </div>
+    </div>
+    
+    <button class="print-btn" onclick="window.print()">🖨️ PRINT CARD</button>
+    
+    <div class="instructions">
+        <h3>📋 Instructions</h3>
+        <ol>
+            <li>Click the <strong>PRINT CARD</strong> button above</li>
+            <li>Print on thick paper or card stock (matte, not glossy)</li>
+            <li>Cut along the card border</li>
+            <li>Hand to the interviewer</li>
+            <li>Tell them to visit your AR URL on their phone</li>
+            <li>Watch their mind get blown! 🤯</li>
+        </ol>
+    </div>
+    
+    <a href="landing.html" class="back-link">← Back to Landing Page</a>
+</body>
+</html>

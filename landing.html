@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0a20 0%, #000010 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 400px;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            color: #00f5ff;
+            text-shadow: 0 0 20px #00f5ff;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+        }
+        
+        .tagline {
+            color: #ff00ff;
+            margin-bottom: 40px;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: transparent;
+            border: 2px solid #00f5ff;
+            color: #00f5ff;
+            font-size: 1rem;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #00f5ff;
+            color: #000;
+            box-shadow: 0 0 30px #00f5ff;
+        }
+        
+        .requirements {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            font-size: 0.85rem;
+            color: #aaa;
+            text-align: left;
+        }
+        
+        .requirements h3 {
+            color: #00ff88;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .requirements ul {
+            list-style: none;
+        }
+        
+        .requirements li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .requirements li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #00f5ff;
+        }
+        
+        .marker-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #ff00ff;
+            font-size: 0.85rem;
+        }
+        
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    
+    <div class="container">
+        <div class="logo">👻</div>
+        <h1>PHANTOM RESUME</h1>
+        <p class="tagline">"Paper fades. Digital is Beyond Time."</p>
+        
+        <a href="index.html" class="cta-button">LAUNCH AR</a>
+        
+        <div class="requirements">
+            <h3>📱 How to Use</h3>
+            <ul>
+                <li>Open this on your smartphone</li>
+                <li>Tap "LAUNCH AR" button</li>
+                <li>Allow camera permission</li>
+                <li>Point at the printed marker card</li>
+                <li>Watch the magic happen! ✨</li>
+            </ul>
+        </div>
+        
+        <a href="marker.html" class="marker-link">🖨️ Print the Marker Card</a>
+    </div>
+</body>
+</html>
